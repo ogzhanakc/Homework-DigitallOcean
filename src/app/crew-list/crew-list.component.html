@@ -15,7 +15,9 @@
             <button mat-menu-item (click)="goCard(element)">
               <span>{{'CARD' | translate}}</span>
             </button>
-
+            <button mat-menu-item (click)="openEdit(element)">
+                <span>{{'EDIT' | translate}}</span>
+              </button>
           </mat-menu>
         </td>
       </ng-container>

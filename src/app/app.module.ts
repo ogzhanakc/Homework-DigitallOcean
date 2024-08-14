@@ -26,6 +26,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
 import { CrewCardComponent } from "./crew-card/crew-card.component";
 import { MatCardModule } from "@angular/material/card";
+import { CrewEditComponent } from "./crew-edit/crew-edit.component";
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { MatCardModule } from "@angular/material/card";
         CurrencySelectorComponent,
         CertificateSelectorComponent,
         CrewCardComponent,
+        CrewEditComponent,
     ],
     bootstrap:[AppComponent],
 

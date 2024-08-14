@@ -1,0 +1,69 @@
+
+<h5 class="text-center">{{'EDIT' | translate}}</h5>
+<mat-grid-list cols="2" rowHeight="5em">
+    <div [formGroup]="crewForm!">
+            <mat-grid-tile>
+                    <mat-form-field appearance="outline" class="flex-auto">
+                        <mat-label>{{ 'FIRST_NAME' | translate }}</mat-label>
+                        <input matInput formControlName="firstName" />
+                    </mat-form-field>
+              
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                    <mat-form-field appearance="outline" class="flex-auto">
+                        <mat-label>{{ 'LAST_NAME' | translate }}</mat-label>
+                        <input matInput formControlName="lastName" />
+                    </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                    <mat-form-field appearance="outline" class="flex-auto">
+                        <mat-label>{{ 'NATIONALITY' | translate }}</mat-label>
+                        <input matInput formControlName="nationality" />
+                    </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                    <mat-form-field appearance="outline" class="flex-auto">
+                        <mat-label>{{ 'DAILY_RATE' | translate }}</mat-label>
+                        <input matInput formControlName="dailyRate" />
+                    </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                    <mat-form-field appearance="outline" class="flex-auto">
+                        <mat-label>{{ 'DAYS_ON_BOARD' | translate }}</mat-label>
+                        <input matInput formControlName="daysOnBoard" />
+                    </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <app-currency-selector [sendCurrency]="currency" #currencySelector ></app-currency-selector>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <app-title-selector #titleSelector [sendTitle]="title" ></app-title-selector>
+            </mat-grid-tile>
+
+              <mat-grid-tile>
+                    <app-certificate-selector #certificateSelector   [Id]="crewId"></app-certificate-selector>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <button mat-raised-button [disabled]="!crewForm!.valid" (click)="save()">{{'SAVE' | translate}} </button>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <button mat-raised-button (click)="close()">{{'CLOSE' | translate}} </button>
+            </mat-grid-tile>
+        </div>
+
+</mat-grid-list>   
+            
+
+
+
+
+
+

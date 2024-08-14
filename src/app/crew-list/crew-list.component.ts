@@ -4,6 +4,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Crew } from '../types/crew.type';
 import { CrewCreateComponent } from '../crew-create/crew-create.component';
 import { Router } from '@angular/router';
+import { CrewEditComponent } from '../crew-edit/crew-edit.component';
 
 
 
@@ -17,6 +18,7 @@ export class CrewListComponent implements OnInit {
 
   crews: Crew[] = [];
   dialogRefCreate?: MatDialogRef<CrewCreateComponent>;
+  dialogRefEdit?: MatDialogRef<CrewEditComponent>;
 
   displayedColumns: string[] = [ 'menu','id', 'firstName', 'lastName', 'nationality', 'title', 'daysOnBoard', 'dailyRate', 'currency', 'totalIncome',];
 
@@ -54,5 +56,17 @@ export class CrewListComponent implements OnInit {
 
   goCard(crew: Crew) {
     this.router.navigateByUrl('crew/crew-card/' + crew.id);
+  }
+
+  openEdit(crew: Crew) {
+    this.dialogRefEdit = this.dialog.open(CrewEditComponent, {
+      data: { crew: crew },
+      width: "500px",
+      height: "500px"
+    });
+    this.dialogRefEdit.afterClosed().subscribe(result => {
+      this.load();
+
+    });
   }
 }
