@@ -11,6 +11,8 @@ import { HeaderComponent } from "./header/header.component";
 import { LanguageSelectorComponent } from "./language-selector/language-selector.component";
 import { MatSelectModule } from "@angular/material/select";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { HomeComponent } from "./home/home.component";
+import { CrewListComponent } from "./crew-list/crew-list.component";
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
         AppComponent,
         HeaderComponent,
         LanguageSelectorComponent,
+        HomeComponent,
+        CrewListComponent,
     ],
     bootstrap:[AppComponent],
 
