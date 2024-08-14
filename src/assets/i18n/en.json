@@ -1,12 +1,29 @@
 {
-    "HEADER": "Crew Management",
-    "TITLE": "Title",
     "ADD_CREW": "Add Crew",
-    "FIRST_NAME": "First Name",
-    "LAST_NAME": "Last Name",
-    "NATIONALITY": "Nationality",
-    "DAYS_ON_BOARD": "Days on Board",
-    "DAILY_RATE": "Daily Rate",
+    "CARD": "Card",
+    "CERTIFICATE_SELECTOR": "Select Certificate",
+    "CLOSE": "Close",
+    "CONFIRM_DELETE": "Do you want to delete?",
     "CURRENCY": "Currency",
-    "TOTAL_INCOME": "Total Income"
-}
+    "CURRENCY_SELECTOR": "Select Currency",
+    "DAILY_RATE": "Daily Rate",
+    "DAYS_ON_BOARD": "Days on Board",
+    "DELETE": "Delete",
+    "DELETE_FAILURE": "Something Went Wrong",
+    "DELETE_SUCCESS": "Deleted Successfully",
+    "DISCOUNT": "Discount",
+    "EDIT": "Edit",
+    "FIRST_NAME": "First Name",
+    "HEADER": "Crew Management",
+    "LAST_NAME": "Last Name",
+    "LANGUAGE_SELECTOR": "Select Language",
+    "NATIONALITY": "Nationality",
+    "SAVE": "Save",
+    "TITLE": "Crew Management",
+    "TITLE_SELECTOR": "Select Title",
+    "TOTAL_EUR": "Total EUR Income",
+    "TOTAL_INCOME": "Total Income",
+    "TOTAL_USD": "Total USD Income",
+    "TURN_BACK": "Turn Back"
+  }
+  

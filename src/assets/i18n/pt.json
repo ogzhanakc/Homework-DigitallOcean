@@ -1,12 +1,29 @@
 {
-    "HEADER": "Gestão de Tripulação",
-    "TITLE": "Título",
     "ADD_CREW": "Adicionar Tripulação",
-    "FIRST_NAME": "Primeiro Nome",
-    "LAST_NAME": "Sobrenome",
-    "NATIONALITY": "Nacionalidade",
-    "DAYS_ON_BOARD": "Dias a Bordo",
-    "DAILY_RATE": "Taxa Diária",
+    "CARD": "Cartão",
+    "CERTIFICATE_SELECTOR": "Selecionar Certificado",
+    "CLOSE": "Fechar",
+    "CONFIRM_DELETE": "Deseja excluir?",
     "CURRENCY": "Moeda",
-    "TOTAL_INCOME": "Rendimento Total"
-}
+    "CURRENCY_SELECTOR": "Selecionar Moeda",
+    "DAILY_RATE": "Taxa Diária",
+    "DAYS_ON_BOARD": "Dias a Bordo",
+    "DELETE": "Excluir",
+    "DELETE_FAILURE": "Algo deu errado",
+    "DELETE_SUCCESS": "Excluído com sucesso",
+    "DISCOUNT": "Desconto",
+    "EDIT": "Editar",
+    "FIRST_NAME": "Primeiro Nome",
+    "HEADER": "Gestão de Tripulação",
+    "LAST_NAME": "Sobrenome",
+    "LANGUAGE_SELECTOR": "Selecionar Idioma",
+    "NATIONALITY": "Nacionalidade",
+    "SAVE": "Salvar",
+    "TITLE": "Título",
+    "TITLE_SELECTOR": "Selecionar Título",
+    "TOTAL_EUR": "Rendimento Total em EUR",
+    "TOTAL_INCOME": "Rendimento Total",
+    "TOTAL_USD": "Rendimento Total em USD",
+    "TURN_BACK": "Voltar"
+  }
+  
