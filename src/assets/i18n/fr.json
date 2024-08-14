@@ -1,4 +1,12 @@
 {
-  "TITLE": "Crew Managemento"
-
+    "HEADER": "Gestion de l'Équipage",
+    "TITLE": "Titre",
+    "ADD_CREW": "Ajouter un Équipage",
+    "FIRST_NAME": "Prénom",
+    "LAST_NAME": "Nom de Famille",
+    "NATIONALITY": "Nationalité",
+    "DAYS_ON_BOARD": "Jours à Bord",
+    "DAILY_RATE": "Tarif Journalier",
+    "CURRENCY": "Devise",
+    "TOTAL_INCOME": "Revenu Total"
 }

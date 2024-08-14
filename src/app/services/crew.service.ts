@@ -24,4 +24,10 @@ export class CrewService {
       getCrews(): Crew[] {
         return this.crews;
       }
+
+      addCrew(newCrew: Crew) {
+        newCrew.id = this.crews[this.crews.length - 1].id! + 1;
+        newCrew.totalIncome = newCrew.dailyRate! * newCrew.daysOnBoard!;
+        this.crews.push(newCrew);
+      }
 }

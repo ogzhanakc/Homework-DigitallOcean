@@ -14,6 +14,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HomeComponent } from "./home/home.component";
 import { CrewListComponent } from "./crew-list/crew-list.component";
 import { MatTableModule } from "@angular/material/table";
+import { CrewCreateComponent } from "./crew-create/crew-create.component";
+import { MatButtonModule } from "@angular/material/button";
+import { MatGridList, MatGridTile } from "@angular/material/grid-list";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { MatInputModule } from "@angular/material/input";
 
 
 @NgModule({
@@ -23,6 +28,7 @@ import { MatTableModule } from "@angular/material/table";
         LanguageSelectorComponent,
         HomeComponent,
         CrewListComponent,
+        CrewCreateComponent,
     ],
     bootstrap:[AppComponent],
 
@@ -30,6 +36,12 @@ import { MatTableModule } from "@angular/material/table";
         MatFormFieldModule,
         MatSelectModule,
         MatTableModule,
+        MatButtonModule,
+        MatGridList,
+        MatGridTile,
+        FormsModule,
+        MatInputModule,
+        ReactiveFormsModule,
         BrowserModule, 
         BrowserAnimationsModule,
         AppRoutingModule,

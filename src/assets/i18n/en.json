@@ -1,4 +1,12 @@
 {
-    "TITLE": "Crew Management"
-
+    "HEADER": "Crew Management",
+    "TITLE": "Title",
+    "ADD_CREW": "Add Crew",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "NATIONALITY": "Nationality",
+    "DAYS_ON_BOARD": "Days on Board",
+    "DAILY_RATE": "Daily Rate",
+    "CURRENCY": "Currency",
+    "TOTAL_INCOME": "Total Income"
 }

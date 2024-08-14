@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component,OnInit } from '@angular/core';
 import { CrewService } from '../services/crew.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Crew } from '../types/crew.type';
+import { CrewCreateComponent } from '../crew-create/crew-create.component';
 
 
 
@@ -14,12 +15,14 @@ import { Crew } from '../types/crew.type';
 export class CrewListComponent implements OnInit {
 
   crews: Crew[] = [];
+  dialogRefCreate?: MatDialogRef<CrewCreateComponent>;
 
   displayedColumns: string[] = [ 'id', 'firstName', 'lastName', 'nationality', 'title', 'daysOnBoard', 'dailyRate', 'currency', 'totalIncome',];
 
   constructor(
     private crewService: CrewService,
     private cdr: ChangeDetectorRef,
+    private dialog: MatDialog,
 
   ) {
 
@@ -37,5 +40,14 @@ export class CrewListComponent implements OnInit {
 
   }
 
+  openCrewCreate(): void {
+    this.dialogRefCreate = this.dialog.open(CrewCreateComponent, {
+      width: "550px",
+      height: "600px"
+    });
+    this.dialogRefCreate.afterClosed().subscribe(result => {
+      this.load();
 
+    });
+  }
 }
