@@ -22,6 +22,10 @@ import { MatInputModule } from "@angular/material/input";
 import { TitleSelectorComponent } from "./title-selector/title-selector.component";
 import { CurrencySelectorComponent } from "./currency-selector/currency-selector.component";
 import { CertificateSelectorComponent } from "./certificate-selector/certificate-selector.component";
+import { MatIconModule } from "@angular/material/icon";
+import { MatMenuModule } from "@angular/material/menu";
+import { CrewCardComponent } from "./crew-card/crew-card.component";
+import { MatCardModule } from "@angular/material/card";
 
 
 @NgModule({
@@ -35,10 +39,13 @@ import { CertificateSelectorComponent } from "./certificate-selector/certificate
         TitleSelectorComponent,
         CurrencySelectorComponent,
         CertificateSelectorComponent,
+        CrewCardComponent,
     ],
     bootstrap:[AppComponent],
 
     imports: [
+        MatCardModule,
+        MatMenuModule,
         MatFormFieldModule,
         MatSelectModule,
         MatTableModule,
@@ -47,6 +54,7 @@ import { CertificateSelectorComponent } from "./certificate-selector/certificate
         MatGridTile,
         FormsModule,
         MatInputModule,
+        MatIconModule,
         ReactiveFormsModule,
         BrowserModule, 
         BrowserAnimationsModule,

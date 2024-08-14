@@ -24,13 +24,18 @@ export class CrewService {
       getCrews(): Crew[] {
         return this.crews;
       }
-
+      
+      getCrew(id: number): Crew {
+        const crew = this.crews.find(crew => crew.id == id);
+        return crew!;
+      }
+    
       addCrew(newCrew: Crew) {
         newCrew.id = this.crews[this.crews.length - 1].id! + 1;
         newCrew.totalIncome = newCrew.dailyRate! * newCrew.daysOnBoard!;
         this.crews.push(newCrew);
       }
-      
+
       getCrewCertificate(id: number) :string[]{
         const crew = this.crews.find(crew => crew.id == id);
         return crew!.certificates!;

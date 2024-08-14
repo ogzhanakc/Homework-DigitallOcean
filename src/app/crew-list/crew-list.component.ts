@@ -3,6 +3,7 @@ import { CrewService } from '../services/crew.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Crew } from '../types/crew.type';
 import { CrewCreateComponent } from '../crew-create/crew-create.component';
+import { Router } from '@angular/router';
 
 
 
@@ -17,13 +18,13 @@ export class CrewListComponent implements OnInit {
   crews: Crew[] = [];
   dialogRefCreate?: MatDialogRef<CrewCreateComponent>;
 
-  displayedColumns: string[] = [ 'id', 'firstName', 'lastName', 'nationality', 'title', 'daysOnBoard', 'dailyRate', 'currency', 'totalIncome',];
+  displayedColumns: string[] = [ 'menu','id', 'firstName', 'lastName', 'nationality', 'title', 'daysOnBoard', 'dailyRate', 'currency', 'totalIncome',];
 
   constructor(
     private crewService: CrewService,
     private cdr: ChangeDetectorRef,
     private dialog: MatDialog,
-
+    private router: Router,
   ) {
 
   }
@@ -49,5 +50,9 @@ export class CrewListComponent implements OnInit {
       this.load();
 
     });
+  }
+
+  goCard(crew: Crew) {
+    this.router.navigateByUrl('crew/crew-card/' + crew.id);
   }
 }

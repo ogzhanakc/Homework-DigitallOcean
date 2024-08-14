@@ -1,0 +1,56 @@
+.turn-back{
+    width: 150px;
+    margin: 10px 0px 0px  20px;
+    color: #000
+}
+
+.crew-card {
+  mat-card {
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+    mat-card-header {
+      background: #2f3845;
+      color: white;
+      padding: 30px 30px 10px 30px;
+
+      mat-card-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      mat-card-subtitle {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        color: white;
+      }
+    }
+
+    mat-card-content {
+      padding: 10px 30px 0px 30px;
+
+      .crew-info {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .crew-details {
+        flex: 1;
+        margin-right: 20px;
+
+        p {
+          margin: 12px 0;
+          font-size: 1.1rem;
+          color: #444;
+        }
+      }
+
+
+      app-certificate-selector {
+        padding: 20px 30px 0px 30px;
+      }
+    }
+  }
+}
