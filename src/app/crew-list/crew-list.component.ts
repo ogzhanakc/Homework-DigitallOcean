@@ -20,6 +20,8 @@ export class CrewListComponent implements OnInit {
   crews: Crew[] = [];
   dialogRefCreate?: MatDialogRef<CrewCreateComponent>;
   dialogRefEdit?: MatDialogRef<CrewEditComponent>;
+  totalUsd?: number;
+  totalEur?: number;
 
   displayedColumns: string[] = [ 'menu','id', 'firstName', 'lastName', 'nationality', 'title', 'daysOnBoard', 'dailyRate', 'currency', 'discount','totalIncome',];
 
@@ -34,6 +36,7 @@ export class CrewListComponent implements OnInit {
   }
   ngOnInit(): void {
     this.load();
+    this.loadTotalIncomes();
     this.cdr.detectChanges();
 
   }
@@ -44,7 +47,10 @@ export class CrewListComponent implements OnInit {
     this.crews = [...this.crewService.getCrews()];
 
   }
-
+  loadTotalIncomes() {
+    this.totalUsd = this.crewService.getTotalIncomeSum('USD');
+    this.totalEur = this.crewService.getTotalIncomeSum('EUR');
+  }
   openCrewCreate(): void {
     this.dialogRefCreate = this.dialog.open(CrewCreateComponent, {
       width: "550px",
@@ -52,7 +58,7 @@ export class CrewListComponent implements OnInit {
     });
     this.dialogRefCreate.afterClosed().subscribe(result => {
       this.load();
-
+      this.loadTotalIncomes();
     });
   }
 
@@ -68,6 +74,7 @@ export class CrewListComponent implements OnInit {
     });
     this.dialogRefEdit.afterClosed().subscribe(result => {
       this.load();
+      this.loadTotalIncomes();
 
     });
   }
@@ -78,6 +85,7 @@ export class CrewListComponent implements OnInit {
 
         if (result) {
           this.load();
+          this.loadTotalIncomes();
 
           this.translateService.get('DELETE_SUCCESS').subscribe((successText: string) => {
             alert(successText);

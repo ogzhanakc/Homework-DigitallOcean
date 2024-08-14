@@ -1,3 +1,19 @@
+.create-crew{
+    width: 250px;
+    padding: 20px; 
+    margin: 10px;
+    color: #000
+}
+
+
+.icon-button {
+    width: 40px;    
+    mat-icon {
+      margin: auto; 
+      display: block;
+    }
+}
+
 .table
 {
     margin: 10px;
@@ -5,9 +21,7 @@
 .list-page{
     margin: 1%;
 }
-.create-crew{
-    width: 250px;
-    padding: 20px; 
-    margin: 10px;
-    color: #000
+  
+.total-income{
+    padding: 1em;
 }
