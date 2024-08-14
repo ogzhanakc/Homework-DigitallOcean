@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { Crew } from '../types/crew.type';
 import { TitleSelectorComponent } from '../title-selector/title-selector.component';
 import { CurrencySelectorComponent } from '../currency-selector/currency-selector.component';
+import { CertificateSelectorComponent } from '../certificate-selector/certificate-selector.component';
 
 
 @Component({
@@ -29,6 +30,7 @@ export class CrewCreateComponent implements OnInit {
   }
   @ViewChild('titleSelector', {static:false}) titleSelector?: TitleSelectorComponent;
   @ViewChild('currencySelector', {static:false}) currencySelector?: CurrencySelectorComponent;
+  @ViewChild('certificateSelector', {static:false}) certificateSelector?: CertificateSelectorComponent;
 
 
   ngOnInit(): void {
@@ -58,11 +60,11 @@ export class CrewCreateComponent implements OnInit {
         firstName: this.crewForm!.value['firstName'],
         lastName: this.crewForm!.value['lastName'],
         nationality: this.crewForm!.value['nationality'],
-        title: "",
+        title: this.titleSelector?.getSelected(),
         daysOnBoard: this.crewForm!.value['daysOnBoard'],
         dailyRate: this.crewForm!.value['dailyRate'],
-        currency: "",
-        certificates: this.certificates
+        currency: this.currencySelector?.getSelected(),
+        certificates: this.certificateSelector?.getSelected(),
       };
       this.crewService.addCrew(this.newCrew);
       this.dialogRef.close();

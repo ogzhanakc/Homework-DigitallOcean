@@ -46,6 +46,10 @@
             <app-title-selector #titleSelector ></app-title-selector>
         </mat-grid-tile>
 
+        <mat-grid-tile>
+            <app-certificate-selector #certificateSelector
+                ></app-certificate-selector>
+        </mat-grid-tile>
 
         <mat-grid-tile>
             <button mat-raised-button [disabled]="!crewForm!.valid" (click)="save()">{{'SAVE' | translate}} </button>

@@ -30,4 +30,9 @@ export class CrewService {
         newCrew.totalIncome = newCrew.dailyRate! * newCrew.daysOnBoard!;
         this.crews.push(newCrew);
       }
+      
+      getCrewCertificate(id: number) :string[]{
+        const crew = this.crews.find(crew => crew.id == id);
+        return crew!.certificates!;
+      }
 }

@@ -1,0 +1,10 @@
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>{{'CERTIFICATE_SELECTOR' | translate}}</mat-label>
+        <mat-select [(value)]="selectedCertificates" multiple >
+          <mat-option *ngFor="let option of certificates" [value]="option" [disabled] ="isDisabled">
+            {{option}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>

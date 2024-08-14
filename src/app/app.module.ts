@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatInputModule } from "@angular/material/input";
 import { TitleSelectorComponent } from "./title-selector/title-selector.component";
 import { CurrencySelectorComponent } from "./currency-selector/currency-selector.component";
+import { CertificateSelectorComponent } from "./certificate-selector/certificate-selector.component";
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { CurrencySelectorComponent } from "./currency-selector/currency-selector
         CrewCreateComponent,
         TitleSelectorComponent,
         CurrencySelectorComponent,
+        CertificateSelectorComponent,
     ],
     bootstrap:[AppComponent],
 
