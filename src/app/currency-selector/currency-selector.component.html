@@ -1,0 +1,8 @@
+<div>
+    <mat-form-field>
+        <mat-label>{{'CURRENCY_SELECTOR' | translate}}</mat-label>
+        <mat-select [(value)]="currency"style="width: 100; height: 100;"  >
+            <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>

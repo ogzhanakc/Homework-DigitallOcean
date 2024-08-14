@@ -5,6 +5,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Crew } from '../types/crew.type';
 import { TitleSelectorComponent } from '../title-selector/title-selector.component';
+import { CurrencySelectorComponent } from '../currency-selector/currency-selector.component';
 
 
 @Component({
@@ -27,6 +28,7 @@ export class CrewCreateComponent implements OnInit {
     
   }
   @ViewChild('titleSelector', {static:false}) titleSelector?: TitleSelectorComponent;
+  @ViewChild('currencySelector', {static:false}) currencySelector?: CurrencySelectorComponent;
 
 
   ngOnInit(): void {

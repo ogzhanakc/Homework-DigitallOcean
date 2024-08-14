@@ -20,6 +20,7 @@ import { MatGridList, MatGridTile } from "@angular/material/grid-list";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatInputModule } from "@angular/material/input";
 import { TitleSelectorComponent } from "./title-selector/title-selector.component";
+import { CurrencySelectorComponent } from "./currency-selector/currency-selector.component";
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { TitleSelectorComponent } from "./title-selector/title-selector.componen
         CrewListComponent,
         CrewCreateComponent,
         TitleSelectorComponent,
+        CurrencySelectorComponent,
     ],
     bootstrap:[AppComponent],
 
