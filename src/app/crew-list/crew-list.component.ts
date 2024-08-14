@@ -21,7 +21,7 @@ export class CrewListComponent implements OnInit {
   dialogRefCreate?: MatDialogRef<CrewCreateComponent>;
   dialogRefEdit?: MatDialogRef<CrewEditComponent>;
 
-  displayedColumns: string[] = [ 'menu','id', 'firstName', 'lastName', 'nationality', 'title', 'daysOnBoard', 'dailyRate', 'currency', 'totalIncome',];
+  displayedColumns: string[] = [ 'menu','id', 'firstName', 'lastName', 'nationality', 'title', 'daysOnBoard', 'dailyRate', 'currency', 'discount','totalIncome',];
 
   constructor(
     private crewService: CrewService,
@@ -89,5 +89,10 @@ export class CrewListComponent implements OnInit {
         }
       }
     });
+  }
+
+  discountTotalIncome(discount: string, id: number) {
+    console.log(id);
+    this.crewService.editTotalIncome(Number(discount), id);
   }
 }

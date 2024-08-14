@@ -51,6 +51,16 @@ export class CrewService {
           return false;
         }
       }
+
+      editTotalIncome(discount: number, id: number){
+        const crewIndex = this.crews.findIndex(crew => crew.id == id);
+         let result = (this.crews[crewIndex].dailyRate! * this.crews[crewIndex].daysOnBoard!)
+        if (discount != null && discount >= 0 && discount <= 100) {
+          result *= (100 - discount) * 0.01;
+          this.crews[crewIndex].totalIncome = result
+        }
+        
+      }
     getCrewCertificate(id: number): string[] {
         const crew = this.crews.find(crew => crew.id == id);
         return crew!.certificates!;
