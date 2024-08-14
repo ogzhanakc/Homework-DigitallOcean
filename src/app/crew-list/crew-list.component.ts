@@ -5,6 +5,7 @@ import { Crew } from '../types/crew.type';
 import { CrewCreateComponent } from '../crew-create/crew-create.component';
 import { Router } from '@angular/router';
 import { CrewEditComponent } from '../crew-edit/crew-edit.component';
+import { TranslateService } from '@ngx-translate/core';
 
 
 
@@ -27,6 +28,7 @@ export class CrewListComponent implements OnInit {
     private cdr: ChangeDetectorRef,
     private dialog: MatDialog,
     private router: Router,
+    private translateService: TranslateService,
   ) {
 
   }
@@ -67,6 +69,25 @@ export class CrewListComponent implements OnInit {
     this.dialogRefEdit.afterClosed().subscribe(result => {
       this.load();
 
+    });
+  }
+  delete(crew: Crew) {
+    this.translateService.get('CONFIRM_DELETE').subscribe((text: string) => {
+      if (confirm(text)) {
+        const result = this.crewService.deleteCrew(crew.id!);
+
+        if (result) {
+          this.load();
+
+          this.translateService.get('DELETE_SUCCESS').subscribe((successText: string) => {
+            alert(successText);
+          });
+        } else {
+          this.translateService.get('DELETE_FAILURE').subscribe((failureText: string) => {
+            alert(failureText);
+          });
+        }
+      }
     });
   }
 }

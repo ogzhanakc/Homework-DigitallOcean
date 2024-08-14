@@ -42,6 +42,15 @@ export class CrewService {
         updatedCrew.totalIncome = updatedCrew.dailyRate! * updatedCrew.daysOnBoard!;
         this.crews[crewIndex] = updatedCrew;
     }
+    deleteCrew(id: number): boolean {
+        const crewIndex = this.crews.findIndex(crew => crew.id == id);
+        this.crews.splice(crewIndex, 1);
+        if (this.crews.find(crew => crew.id == id) == null) {
+          return true;
+        } else {
+          return false;
+        }
+      }
     getCrewCertificate(id: number): string[] {
         const crew = this.crews.find(crew => crew.id == id);
         return crew!.certificates!;

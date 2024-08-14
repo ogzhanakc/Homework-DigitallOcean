@@ -44,8 +44,6 @@ export class CertificateSelectorComponent implements OnInit {
 
 
     getSelected(): string[] {
-
-        console.log(this.selectedCertificates);
         return this.selectedCertificates!;
     }
 
