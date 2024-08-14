@@ -1,0 +1,8 @@
+<div>
+    <mat-form-field>
+        <mat-label>{{'TITLE_SELECTOR' | translate}}</mat-label>
+        <mat-select [(value)]="title"style="width: 100; height: 100;" (selectionChange)="Selected($event)" >
+            <mat-option *ngFor="let title of titles" [value]="title">{{title}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>

@@ -1,11 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CrewService } from '../services/crew.service';
-
-
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Crew } from '../types/crew.type';
+import { TitleSelectorComponent } from '../title-selector/title-selector.component';
 
 
 @Component({
@@ -27,6 +26,7 @@ export class CrewCreateComponent implements OnInit {
     
     
   }
+  @ViewChild('titleSelector', {static:false}) titleSelector?: TitleSelectorComponent;
 
 
   ngOnInit(): void {
