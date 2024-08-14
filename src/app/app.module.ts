@@ -13,6 +13,7 @@ import { MatSelectModule } from "@angular/material/select";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HomeComponent } from "./home/home.component";
 import { CrewListComponent } from "./crew-list/crew-list.component";
+import { MatTableModule } from "@angular/material/table";
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CrewListComponent } from "./crew-list/crew-list.component";
     imports: [
         MatFormFieldModule,
         MatSelectModule,
+        MatTableModule,
         BrowserModule, 
         BrowserAnimationsModule,
         AppRoutingModule,
